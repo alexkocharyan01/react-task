@@ -1,0 +1,104 @@
+.active {
+    background-color: red;
+    background-color: transparent;
+    transition: all 0.5s ease;
+  }
+  
+  .navbar_container {
+    background-color: rgb(49, 49, 248);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  
+    .menu_icon {
+      display: none;
+  
+      @media (max-width: 780px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  
+    .nav_menu {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        list-style: none;
+  
+        .nav_ink_items {
+          .nav_link{
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+  
+            &:hover {
+              transition-duration: 0.4s;
+              cursor: pointer;
+              border-radius: 8px;
+              background-color: rgb(156, 191, 221);
+            }
+          }
+  
+        }
+  
+        @media (max-width: 780px) {
+          flex-direction: column;
+          background-color: rgb(156, 191, 221);
+        }
+      }
+  
+      @media (max-width: 780px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+      }
+    }
+  
+    @media screen and (max-width: 780px) {
+      .nav-menu
+      .active {
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+      }
+    }
+
+  }
+
+  .main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(49, 49, 248);
+
+    .close,
+    .open{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      p{
+        font-size: 20px;
+        margin-right: 5%;
+      }
+    }
+  }
+
+
